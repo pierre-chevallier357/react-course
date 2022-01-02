@@ -10,7 +10,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1 class="item-title">App component</h1>
+      <h1 className="item-title">App component</h1>
       <input
         type="text"
         value={inputData}
