@@ -2,7 +2,7 @@ const INITIAL_STATE = {
   cart: 1000,
 };
 
-function AddCartReducer(state = INITIAL_STATE, action) {
+function addCartReducer(state = INITIAL_STATE, action) {
   // eslint-disable-next-line default-case
   switch (action.type) {
     case "ADDCART": {
@@ -16,4 +16,4 @@ function AddCartReducer(state = INITIAL_STATE, action) {
   return state;
 }
 
-export default AddCartReducer;
+export default addCartReducer;

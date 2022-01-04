@@ -1,12 +1,15 @@
-import { createStore, combineReducers } from "redux";
-import CounterReducer from "./reducers/CounterReducer";
-import AddCartReducer from "./reducers/AddCartReducer";
+import { createStore, combineReducers, applyMiddleware } from "redux";
+import counterReducer from "./reducers/counterReducer";
+import addCartReducer from "./reducers/addCartReducer";
+import thunk from "redux-thunk";
+import imageDataReducer from "./reducers/imageDataReducer";
 
 const rootReducer = combineReducers({
-  CounterReducer,
-  AddCartReducer,
+  counterReducer,
+  addCartReducer,
+  imageDataReducer,
 });
 
-const store = createStore(rootReducer);
+const store = createStore(rootReducer, applyMiddleware(thunk));
 
 export default store;

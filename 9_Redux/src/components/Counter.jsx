@@ -1,10 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
+import { getCatImage } from "../redux/reducers/imageDataReducer";
 
 export default function Counter() {
-  const { cart, count } = useSelector((state) => ({
-    ...state.AddCartReducer,
-    ...state.CounterReducer,
+  const { cart, count, imageUrl } = useSelector((state) => ({
+    ...state.addCartReducer,
+    ...state.counterReducer,
+    ...state.imageDataReducer,
   }));
 
   const dispatch = useDispatch();
@@ -30,6 +32,10 @@ export default function Counter() {
     });
   };
 
+  useEffect(() => {
+    dispatch(getCatImage());
+  }, []);
+
   return (
     <div>
       <h1>Counter</h1>
@@ -45,6 +51,9 @@ export default function Counter() {
       />
       <br />
       <button onClick={addToCart}>Add to cart</button>
+      <hr />
+      <h3>Cat image</h3>
+      {imageUrl && <img src={imageUrl} style={{ width: "300px" }} alt="cat" />}
     </div>
   );
 }

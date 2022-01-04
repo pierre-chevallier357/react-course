@@ -2,7 +2,7 @@ const INITIAL_STATE = {
   count: 100,
 };
 
-function CounterReducer(state = INITIAL_STATE, action) {
+function counterReducer(state = INITIAL_STATE, action) {
   // eslint-disable-next-line default-case
   switch (action.type) {
     case "INCR": {
@@ -22,4 +22,4 @@ function CounterReducer(state = INITIAL_STATE, action) {
   return state;
 }
 
-export default CounterReducer;
+export default counterReducer;
