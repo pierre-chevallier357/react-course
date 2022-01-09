@@ -24,8 +24,8 @@ export default function Navbar() {
     <nav>
       {(toggleMenu || width > 500) && (
         <ul className="item-list">
-          <li className="item">Accueil</li>
-          <li className="item">Service</li>
+          <li className="item">Home</li>
+          <li className="item">Write</li>
           <li className="item">Contact</li>
         </ul>
       )}
