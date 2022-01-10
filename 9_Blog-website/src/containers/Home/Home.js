@@ -1,6 +1,9 @@
 import React from "react";
 import "./Home.css";
 import Card from "../../components/Card/Card";
+import { useSelector, useDispatch } from "redux";
+import { useEffect, useState } from "react";
+import { getArticles } from "../../redux/articles/articleReducer";
 
 export default function Home() {
   return (
