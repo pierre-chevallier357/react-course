@@ -1,12 +1,21 @@
 import Navbar from "./components/Navbar/Navbar";
 import Home from "./containers/Home/Home";
+import { Route, Routes } from "react-router-dom";
+import AddArticle from "./containers/AddArticle/AddArticle";
+import Contact from "./containers/Contact/Contact";
+import Article from "./containers/Article/Article";
 
 function App() {
   return (
-    <div className="App">
+    <>
       <Navbar />
-      <Home />
-    </div>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/write" element={<AddArticle />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/article" element={<Article />} />
+      </Routes>
+    </>
   );
 }
 
