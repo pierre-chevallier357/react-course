@@ -7,7 +7,10 @@ function articleReducer(state = INITIAL_STATE, action) {
     case "ADD_ARTICLE": {
       const newArr = [...state.articles];
       newArr.unshift(action.payload);
-      return { articles: newArr };
+      return {
+        ...state,
+        articles: newArr,
+      };
     }
     case "LOAD_ARTICLES": {
       return {
