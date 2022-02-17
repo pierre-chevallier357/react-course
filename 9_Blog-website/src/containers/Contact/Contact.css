@@ -1,0 +1,14 @@
+.contact-container {
+  max-width: 700px;
+  margin: 100px auto 0;
+  font-size: 25px;
+}
+
+.contact-container h1 {
+  font-size: 50px;
+  margin-bottom: 10px;
+}
+
+.contact-container p:nth-child(4) {
+  margin-top: 50px;
+}
