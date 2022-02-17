@@ -1,5 +1,6 @@
 {
-  "name": "10_blog-website",
+  "homepage": "https://pierre-chevallier357.github.io/react-course",
+  "name": "9_blog-website",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
